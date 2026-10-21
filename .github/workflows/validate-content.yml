@@ -1,0 +1,91 @@
+# Hold every post in this repo to the rules, whoever committed it.
+#
+# GTM checks these on the way out. Anything written straight into this repo skips that, so the
+# rules live here too, at the commit, the point every route has in common. The site applies the
+# same checks when it reads the repo and leaves out a post that fails them; this workflow makes
+# the failure visible on GitHub as well.
+#
+# Deliberately a short list: what is objective and agreed, not style.
+
+name: Validate content
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'blog/**'
+      - 'news/**'
+      - 'site/**'
+  pull_request:
+    paths:
+      - 'blog/**'
+      - 'news/**'
+      - 'site/**'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Every post has a valid slug, title, date, body and cover, and no em-dashes
+        run: |
+          node - <<'EOF'
+          const fs = require('fs');
+          const path = require('path');
+          const problems = [];
+          let checked = 0;
+          const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+
+          for (const dir of ['blog', 'news']) {
+            if (!fs.existsSync(dir)) continue;
+            for (const name of fs.readdirSync(dir).filter(f => f.endsWith('.json'))) {
+              const file = path.join(dir, name);
+              let post;
+              try {
+                post = JSON.parse(fs.readFileSync(file, 'utf8'));
+              } catch (e) {
+                problems.push(`${file}: not valid JSON (${e.message})`);
+                continue;
+              }
+              checked++;
+
+              if (!SLUG.test(String(post.slug || ''))) problems.push(`${file}: slug must be lowercase letters, numbers and single hyphens.`);
+              if (post.slug !== name.slice(0, -5)) problems.push(`${file}: slug "${post.slug}" does not match the filename.`);
+              if (post.type && post.type !== dir) problems.push(`${file}: type "${post.type}" does not match the folder "${dir}".`);
+              if (!post.date || isNaN(Date.parse(post.date))) problems.push(`${file}: date is not a valid ISO 8601 date.`);
+              if (post.updated && isNaN(Date.parse(post.updated))) problems.push(`${file}: updated is not a valid ISO 8601 date.`);
+              if (post.tags && (!Array.isArray(post.tags) || post.tags.some(t => typeof t !== 'string'))) problems.push(`${file}: tags must be an array of strings.`);
+
+              const body = String(post.content_html || '');
+              if (!body.trim()) problems.push(`${file}: no content_html.`);
+              if (/<(script|style)\b/i.test(body) || /\sstyle\s*=/i.test(body)) problems.push(`${file}: content_html contains <script>, <style> or inline styles.`);
+
+              const cover = String(post.hero_image || post.cover || post.featured_image || '').trim();
+              if (!cover) problems.push(`${file}: no cover image. Every post ships with one. Publish through GTM.`);
+              else if (!/^https:\/\//i.test(cover)) problems.push(`${file}: cover "${cover}" is not an absolute https URL.`);
+
+              const title = String(post.title || '').trim();
+              if (!title) problems.push(`${file}: no title.`);
+
+              // Absolute house rule: never em-dashes or en-dashes, anywhere.
+              for (const [field, value] of [['title', title], ['content_html', body], ['excerpt_html', String(post.excerpt_html || '')]]) {
+                if (/[—–]/.test(value)) problems.push(`${file}: em-dash or en-dash in ${field}. Use a comma or a full stop.`);
+              }
+            }
+          }
+
+          const home = path.join('site', 'homepage-posts.json');
+          if (fs.existsSync(home)) {
+            try { JSON.parse(fs.readFileSync(home, 'utf8')); } catch (e) { problems.push(`${home}: not valid JSON (${e.message})`); }
+          }
+
+          console.log(`checked ${checked} post(s)`);
+          if (problems.length) {
+            console.error(`\n${problems.length} problem(s):\n`);
+            for (const p of problems) console.error('  - ' + p);
+            console.error('\nThe site leaves these posts out. Fix them and push again.');
+            process.exit(1);
+          }
+          console.log('Every post is valid.');
+          EOF

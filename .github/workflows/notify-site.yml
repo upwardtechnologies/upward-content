@@ -1,0 +1,29 @@
+# When a post is added, changed or removed here, tell upwardtech.nl to read this repo again.
+# GTM's whole job stays one action: commit a file to THIS repo. This workflow does the rest,
+# the same way cto-content's notify-landing.yml does it for cryptool.io.
+#
+# No secret is needed. The refresh endpoint only makes the site re-read this public repo, at most
+# once every 30 seconds, so calling it carries no risk. Without the ping the site still picks the
+# change up within five minutes.
+
+name: Notify site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'blog/**'
+      - 'news/**'
+      - 'site/**'
+  workflow_dispatch:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ask upwardtech.nl to refresh Insights
+        run: |
+          # Give GitHub's archive a moment to serve the commit that triggered this run.
+          sleep 10
+          curl -fsS -X POST --max-time 30 https://upwardtech.nl/api/insights/refresh \
+            || echo "::warning::upwardtech.nl did not answer. The site picks the change up within five minutes anyway."
