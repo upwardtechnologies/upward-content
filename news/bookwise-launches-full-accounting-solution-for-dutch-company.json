@@ -2,14 +2,15 @@
   "slug": "bookwise-launches-full-accounting-solution-for-dutch-company",
   "title": "Bookwise launches full accounting solution for Dutch company groups",
   "date": "2026-10-01T09:00:00.000Z",
-  "content_html": "<p>Bookwise went live on 1 October 2026. The new software is designed for Dutch company groups that consist of a holding BV and any number of operating BVs. It offers full double-entry bookkeeping with period locking. Sales and purchase invoices are posted to the ledger with BTW. The system generates quarterly and annual BTW returns, including reverse charge and intra-EU adjustments. Profit and loss statements and balance sheet reports are available for each company and for the group as a whole. A compliance calendar tracks BTW, VPB, annual accounts and KvK deadlines. Roles can be set per company: owner, accountant, employee or viewer. A group dashboard shows the status of all companies in one view. New companies start with a Dutch chart of accounts and BTW codes automatically.</p>",
+  "content_html": "<p>Bookwise went live on 1 October 2026. The accounting software is built for Dutch company groups made up of a holding BV (a Dutch private limited company) and any number of operating BVs.</p>\n<p>Bookwise automates bookkeeping by reading invoices and receipts, preparing entries and flagging exceptions. This turns bookkeeping from typing into checking. The software includes full double-entry bookkeeping with period locking, VAT (value-added tax) returns per quarter and per year including reverse charge, profit and loss and balance sheet reports per company and for the whole group, a group dashboard, and a calendar for VAT, corporate tax, annual accounts and Chamber of Commerce (KvK) deadlines. Roles can be set per company.</p>\n<p>The product also covers invoicing, quotes, purchasing, bank reconciliation, payroll and receipts with text recognition. An AI advisor is included.</p>\n<p>Upward Technologies, a software company in Breda, the Netherlands, builds software and then runs it. Its team works inside the European Economic Area (EEA). Bookwise is offered as SaaS (Upward hosts and updates it, and the customer's data stays theirs and can be exported) or implemented to fit the customer's process, connected to their systems, and deployed on Upward's infrastructure or the customer's own.</p>\n<p><a href=\"https://bookwise.upwardtech.nl\" target=\"_blank\" rel=\"noopener\">https://bookwise.upwardtech.nl</a></p>",
   "type": "news",
   "author": "Upward Technologies",
-  "excerpt_html": "Bookwise went live on 1 October 2026. The new software is designed for Dutch company groups that consist of a holding BV and any number of operating BVs.",
+  "excerpt_html": "Bookwise went live on 1 October 2026. The accounting software is built for Dutch company groups made up of a holding BV (a Dutch private limited company) and",
   "tags": [
     "General"
   ],
-  "cover": "https://gtm.upwardtech.nl/p/upward-tech/media/bookwise-launches-full-accounting-solution-for-dutch-company-1792604454626.jpg",
-  "hero_image": "https://gtm.upwardtech.nl/p/upward-tech/media/bookwise-launches-full-accounting-solution-for-dutch-company-1792604454626.jpg",
-  "featured_image": "https://gtm.upwardtech.nl/p/upward-tech/media/bookwise-launches-full-accounting-solution-for-dutch-company-1792604454626.jpg"
+  "cover": "https://gtm.upwardtech.nl/p/upward-tech/media/bookwise-launches-full-accounting-solution-for-dutch-company-1792760629895.png",
+  "hero_image": "https://gtm.upwardtech.nl/p/upward-tech/media/bookwise-launches-full-accounting-solution-for-dutch-company-1792760629895.png",
+  "featured_image": "https://gtm.upwardtech.nl/p/upward-tech/media/bookwise-launches-full-accounting-solution-for-dutch-company-1792760629895.png",
+  "workspace": "upward-tech"
 }
