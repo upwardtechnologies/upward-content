@@ -2,14 +2,15 @@
   "slug": "upward-technologies-opens-sign-up-for-eris-design-partners",
   "title": "Upward Technologies opens sign-up for ERIS design partners",
   "date": "2026-09-25T09:00:00.000Z",
-  "content_html": "<p>On 25 September 2026 Upward Technologies announced ERIS and opened sign-up for design partners.</p>\n<p>ERIS brings the business tools a company runs on into one system with one login. AI agents work across all modules on the company's own data. Every question and every AI action is logged.</p>\n<p>ERIS will run in Upward's cloud or on-premise with local AI models. The beta with design partners starts in November 2026. The official release is in January 2027.</p>\n<p>Sign-up for design partners is open on the ERIS product page.</p>",
+  "content_html": "<p>Upward Technologies announced ERIS (Enterprise Resource &amp; Intelligence System) on 25 September 2026 and opened sign-up for design partners.</p>\n<p>ERIS is one system for everything a company runs on, with AI across all of it. It is built for companies that cannot send all their data and knowledge to the cloud. The system replaces separate cloud tools such as chat, documents, customer management (CRM), meetings, e-signature and email.</p>\n<p>AI agents work across all modules on the company's own data and knowledge base. Users get one login, one data layer and every action is logged. ERIS runs on the company's own hardware with local AI models, or in Upward's cloud.</p>\n<p>Design partners help shape the product before the official release. The beta with design partners starts in November 2026. The official release is in January 2027.</p>\n<p>ERIS is in development and not available or in beta yet.</p>\n<p><a href=\"https://upwardtech.nl/en/products/eris#join-design-partner\" target=\"_blank\" rel=\"noopener\">https://upwardtech.nl/en/products/eris#join-design-partner</a></p>",
   "type": "news",
   "author": "Upward Technologies",
-  "excerpt_html": "On 25 September 2026 Upward Technologies announced ERIS and opened sign-up for design partners. ERIS brings the business tools a company runs on into one",
+  "excerpt_html": "Upward Technologies announced ERIS (Enterprise Resource & Intelligence System) on 25 September 2026 and opened sign-up for design partners.",
   "tags": [
     "General"
   ],
-  "cover": "https://gtm.upwardtech.nl/p/upward-tech/media/compose-two-identical-dark-slate-pedestals-stand-1792756745856.png",
-  "hero_image": "https://gtm.upwardtech.nl/p/upward-tech/media/compose-two-identical-dark-slate-pedestals-stand-1792756745856.png",
-  "featured_image": "https://gtm.upwardtech.nl/p/upward-tech/media/compose-two-identical-dark-slate-pedestals-stand-1792756745856.png"
+  "cover": "https://gtm.upwardtech.nl/p/eris/media/one-system-on-your-own-premises-design_split-1792761014064.png",
+  "hero_image": "https://gtm.upwardtech.nl/p/eris/media/one-system-on-your-own-premises-design_split-1792761014064.png",
+  "featured_image": "https://gtm.upwardtech.nl/p/eris/media/one-system-on-your-own-premises-design_split-1792761014064.png",
+  "workspace": "upward-tech"
 }
