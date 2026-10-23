@@ -2,14 +2,15 @@
   "slug": "upward-technologies-launches-transfer-file-transfer-service",
   "title": "Upward Technologies launches Transfer file transfer service",
   "date": "2026-09-24T09:00:00.000Z",
-  "content_html": "<p>On 24 September 2026, Upward Technologies launched Transfer, a secure file transfer service for businesses.</p>\n<p>The service is live at transfer.upwardtech.nl.</p>",
+  "content_html": "<p>Upward Technologies has launched Transfer, a secure file transfer service, at transfer.upwardtech.nl.</p>\n<p>Transfer lets teams send files through a link. The sender needs no account. Every link expires on its own, and files sit encrypted on Upward's own infrastructure with no cloud service in between.</p>\n<p>The service includes file requests, upload links, single-use links, password protection, resumable uploads, malware scanning, live progress tracking, folder management and an audit log. Teams can see who sent what, when, and track every action.</p>\n<p>Upward Technologies is a software company based in Breda, the Netherlands. It builds software and then runs it, with staff working inside the European Economic Area (EEA). Its products are offered as SaaS (software as a service, where Upward hosts and updates it and your data stays yours and can be exported) or implemented to fit your process and connected to your systems, deployed on Upward's infrastructure or your own.</p>\n<p>Transfer is live now.</p>\n<p><a href=\"https://transfer.upwardtech.nl\" target=\"_blank\" rel=\"noopener\">https://transfer.upwardtech.nl</a></p>",
   "type": "news",
   "author": "Upward Technologies",
-  "excerpt_html": "On 24 September 2026, Upward Technologies launched Transfer, a secure file transfer service for businesses. The service is live at transfer.upwardtech.nl.",
+  "excerpt_html": "Upward Technologies has launched Transfer, a secure file transfer service, at transfer.upwardtech.nl. Transfer lets teams send files through a link.",
   "tags": [
     "General"
   ],
-  "cover": "https://gtm.upwardtech.nl/p/upward-tech/media/upward-technologies-launches-transfer-file-transfer-service-1792604394605.jpg",
-  "hero_image": "https://gtm.upwardtech.nl/p/upward-tech/media/upward-technologies-launches-transfer-file-transfer-service-1792604394605.jpg",
-  "featured_image": "https://gtm.upwardtech.nl/p/upward-tech/media/upward-technologies-launches-transfer-file-transfer-service-1792604394605.jpg"
+  "cover": "https://gtm.upwardtech.nl/p/upward-tech/media/upward-technologies-launches-transfer-file-transfer-service-1792760582650.png",
+  "hero_image": "https://gtm.upwardtech.nl/p/upward-tech/media/upward-technologies-launches-transfer-file-transfer-service-1792760582650.png",
+  "featured_image": "https://gtm.upwardtech.nl/p/upward-tech/media/upward-technologies-launches-transfer-file-transfer-service-1792760582650.png",
+  "workspace": "upward-tech"
 }
